@@ -1,352 +1,455 @@
-body{
-    background-color:#E9E7E7;
-    margin:0 ;
-    padding:  0;
-    transition: background-color 0.5s ease;
+@import url("https://fonts.googleapis.com/css2?family=Marhey&display=swap");
+
+body {
+  background-color: #d2d2d2;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease;
+  font-family: "Marhey", cursive;
 }
 /*---COMBINE STYLING OF THE SEARCH FIELD AND THE TOGGLE THEME--*/
-#search-theme{
-display: flex;
+#search-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4adde;
+  padding: 10px;
+  gap: 10px;
 }
 
-/*---label of search song input field---*/
-label{
-    margin-left: 100px;
-    font-size: 2rem ;
-    color: #ff0059;
-    font-family:cursive ;
-    display: flex;
-    width: 320px ;
-    height: 40px ;
-}
 /*---search-song-input-field-section--*/
-#song-input-field{
-    display: flex;
-    flex-direction: row;
+
+#song-input-field {
+  display: flex;
 }
+
+#song-input-field input {
+  width: 500px;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+}
+
+#search-song-button {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: rgb(15, 15, 15);
+}
+
+#song-input-field button:hover {
+  background: #a762b9;
+  border: 1px solid #c989d9;
+  cursor: pointer;
+}
+
 /*--search-song---*/
-#searchsong{
-    display:flex;
-    flex-direction: column;
-    margin-top: 10px ;
+#searchsong {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 }
 
 /*---search input field styling---*/
-#song-search-input{
-    width: 300px ;
-    height: 30px ;
-    margin-top: 10PX ;
+#song-search-input {
+  width: 500px;
+  height: 20px;
 }
 
-
 /*---search Song Button---*/
-#search-song-button{
-    width: 200px ;
-    height: 50px ;  
-  margin-left: 10px ;  
-
+#search-song-button {
+  width: 100px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 /*---search-song-results-styling---*/
-#song-search-results-list li{
-list-style-type: none;
-font-size: 2rem ;
-font-family:cursive ;
-color:white;
-background-color: #000;
-width: 700px ;
+#song-search-results-list li {
+  list-style-type: none;
+  font-size: 2rem;
+  background-color: #000;
+  border-radius: 10px;
+  color: white;
+  width: 700px;
 }
 
-
-/*---search results on hover---*/
-#song-search-results-list:hover{
-    scale:1.2;
-    transition: all 2s ease-in-out;
-    margin-left: 200px ;
+#song-search-results-list li:hover {
+  box-shadow: 0 4px 15px rgba(1, 0, 1, 0.5); /* Add a glowing effect */
+  transform: scale(1.02); /* Slightly enlarge the item for emphasis */
 }
+
 /*---toogle--button--*/
 
-#btn{
-    background-color: #0573AB;
-    color:#fff;
-    font-family: cursive;
-    font-size:2.5rem;
-    width: 250px;
-    height: 80px;
-   border: #333 2px solid;
-    border-radius: 100px ;
-  margin-top: 20px ;
-  margin-left: 900px ;
- 
+#btn {
+  background-color: #0573ab;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 150px;
+  height: 50px;
+  border: #0573ab 2px solid;
+  border-radius: 100px;
+  margin-left: 500px;
 }
 /*--Text of the Toggle-buttonn--*/
-#btnText{
-    text-align: center;
+#btnText {
+  text-align: center;
 }
 
 /*--styling of the toggle-button theme---*/
 
 [data-theme="dark"] {
-    background-color: #01011b;
-    color:black;
+  background-color: #01011b;
+  color: black;
 }
-
 
 /* ---Heading of the music Player---*/
-.heading{
-color: rgb(220, 28, 153);
-font-size: 2.5rem ;
-font-family: cursive;
-text-align: center;
+.heading {
+  color: rgb(65, 4, 75);
+  font-size: 1.6rem;
+  text-align: center;
 }
 
+.topHeading {
+  color: rgb(104, 22, 116);
+}
 
 /*--container that stores all songs ,song card, playlist section*/
-.container{
-    display: flex;
-    width: 100vw ;
-    justify-content: space-between;
-    margin-left: 50px ;
- 
+.container {
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 100px;
+}
+
+@media (max-width: 840px) {
+  .container {
+    flex-direction: column;
+    margin-left: 0; /* Optional: adjust margin on small screens */
+  }
 }
 
 /*--all songs Section---*/
-#All-Songs{
-    background:linear-gradient(black,#0573AB 70%); 
-    width: 25vw ;
-    height: 75vh ;
-    border-radius: 10px ;
+#All-Songs {
+  background: linear-gradient(135deg, rgb(4, 3, 3) 10%, #b569c6 90%);
+  width: 25vw;
+  height: 70vh;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+  #All-Songs {
+    width: 40vw;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #All-Songs {
+    width: 60vw; /* Adjust width for smaller screens */
+    height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  #All-Songs {
+    width: 80vw; /* Adjust width for very small screens */
+    height: 70vh; /* Adjust height for very small screens */
+  }
 }
 
 /*--styling of filter-genre-sectionn--*/
-#filter-by-genre{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+#filter-by-genre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 /*--filter-dropdown-menu-select---*/
-select{
-    font-size: 1.5rem ;
-    font-family:cursive ;
-   color:#F63159;
-   background-color:black ;
-   border-radius: 8px ;
+select {
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 8px;
+  margin-left: 20px;
 }
 
-
 /*--styling to description of dropdown menu 'FILTER BY GENRE:'--*/
-#filter-by-genre #filter-song  {
-    color: #fff;
-    margin-top: 20px ;
-    margin-left: 20px ;
-    background-color: rgb(246, 49, 89);
-   
-    font-size: 2rem ;
-    
- 
+#filter-by-genre #filter-song {
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
 }
 
 /*---styling of heading 'All Songs'----*/
-#genre-songs h1{
-color:#000;
-font-family:cursive ;
-margin-left: 20px ;
-background-color:  rgb(147, 111, 118);
-width: 200px ;
-
+#genre-songs h1 {
+  color: #ffffff;
+  margin-left: 20px;
+  width: 200px;
 }
 
-
 /*-List of songs under 'All Songs'--*/
-#song-list{
-    font-size: 2rem ;
-    color:#fff;
-    font-family: cursive ;
-   background-color:#000;
+#song-list {
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 10px;
 }
 
 /*-REMOVING THE STYLE OF THE LISTITEM BY DISPLAY :NONE -*/
-#song-list li{
-    list-style-type: none;
+#song-list li {
+  list-style-type: none;
+}
+
+#song-list li:hover {
+  background-color: #580d7e;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 /*--SoNG-CARD-SECTION---*/
-#Song-card{
-    background:linear-gradient(#0C134F,black,#1D267D );
-width: 550px ;
-height: 1150px ;
-border-radius: 20px ; 
-
+#Song-card {
+  background: linear-gradient(#e894ff, black, #400358);
+  width: 450px;
+  height: 600px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-bottom: 100px;
 }
 
 /*--SONG-DETAILSS--*/
-#song-details{
-    background-color:#5C469C;
-    margin-top: 120px;
-    width:450px;
-    height: 600px ;
-    margin-left: 40px ;
-    margin-bottom: 70px ;
-    margin-right:40px ;
-     border-radius: 30px ;
-
-
+#song-details {
+  background-color: #000000;
+  margin-top: 30px;
+  width: 360px;
+  height: 400px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  margin-bottom: 15px;
+  border-radius: 30px;
 }
 /*-----SONG NAME ,ARTIST NAME,SONG IMAGE----*/
-#song-name{
-    font-size: 2.5rem ;
-    font-family: cursive ;
-    color: #fff;
-    margin-left: 150px ;
-
+#song-name {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
 }
 
-#artist-name{
-    font-size: 1.5rem ;
-    font-family: cursive ; 
-    color: #fff; 
-    margin-left: 150px ;
+#artist-name {
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
 }
 
-#song-image{
-    width:300px;
-    margin-right: 50px ;
-    margin-left: 70px ;
-    margin-top: 20px ;
+.cardimg {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
+#song-image {
+  width: 180px;
+}
 
 /*--CONTROL BUTTONS (Previous,Next,Addtoplaylist)--*/
-#controls{
-    display: flex;
-    justify-content: space-between;
+#controls {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*-PREV BUTTON--*/
-#Prev{
-    background-color: #E9E7E7;
-    border-radius: 10px ;
-    width: 100px ;
-    height: 50px ;
-    margin-left: 30px ;
-    border: #269bd5 4px solid;
+#Prev {
+  background-color: #e9e7e7;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  border: #269bd5 4px solid;
 }
 
 /*--PREVIOUS BUTTON ICON STYLING-*/
-.fa-arrow-left{
-    text-align: center;
-    margin-left: 30px ;
-    margin-top: 10px ;
- 
+.fa-arrow-left {
+  text-align: center;
 }
 /*-NEXT BUTTON--*/
-#Next{
-    background-color: #E9E7E7;
-    border-radius: 10px ;
-    width: 100px ;
-    height: 50px ;
-    margin-right: 30px ;
-    border: #269bd5 4px solid;
-
+#Next {
+  background-color: #e9e7e7;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+  border: #269bd5 4px solid;
 }
 
 /*--NEXT BUTTON ICON STYLING-*/
-.fa-arrow-right{
-    text-align: center;
-    margin-left: 40px ;
-    margin-top: 10px ;  
-
+.fa-arrow-right {
+  text-align: center;
 }
 
-
 /*--AUDIO STYLING IN SONG CARD--*/
-#audio{
-    margin-left: 70px ;
-
+.audio-section {
+  display: flex;
+  justify-content: center;
 }
 
 /*--ADD-TO-PLAYLIST BUTTON --*/
-#add-to-playlist{
-    background-color:darkorchid;
-    border-radius: 10px ;
-    color: #fff ;
-    font-size: 1rem ;
-    margin-top:80px;
-    margin-left: 120px ;
-    width: 300px ;
-    height: 100px ;
-    margin-right: 30px ;
-    border: black 4px solid; 
-    text-align: center; 
-    align-items: center;
-    font-family: cursive ;
-}
 
+.addtocartsection {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#add-to-playlist {
+  background-color: darkorchid;
+  border-radius: 10px;
+  color: #fff;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 50px;
+}
 
 /*--PLAYLIST SECTION---*/
-#Playlist-div{
-    background:linear-gradient(black,#0573AB 70%); 
-    width: 25vw ; 
-    height: 75vh ;
-    border-radius: 10px ;  
-    margin-right: 100px ; 
-    padding-top: 10px ;
+#Playlist-div {
+  background: linear-gradient(black, #8b4aa1 70%);
+  width: 25vw;
+  height: 58vh;
+  border-radius: 10px;
+  margin-right: 100px;
+  padding-top: 8px;
+  overflow-y: auto;
 }
 
+#playlist-name-input {
+  width: 500px;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
 
-
-/*--CREATE-TO-PLAYLIST BUTTON STYLING---*/
-button {
-    background-color:darkmagenta;
-    color: #ffff;
-    font-family: cursive;
-    font-size: 1.5rem;
-    width: 250px ;
-    height: 70px ;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 50px ;
-  
+#create-playlist-button {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: rgb(15, 15, 15);
 }
 
 /*--CREATE TO PLAYLIST BUTTON TEXT---*/
-#button-text{
-    margin-top: 25px ;
-    font-size: 2rem ;
+#button-text {
+  margin-top: 50px;
+  font-size: 1rem;
+  text-align: center;
 }
-
+#addtocardbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  width: 180px;
+  height: 50px;
+}
 
 /*---CURRENT PLAYLIST HEADING--*/
 #current-playlist h1 {
-    color: #fff;
-    margin-top: 20px ;
-   margin-left: 50px ;
-   font-family: cursive ;
-   background-color: darkmagenta ;
-   width: 300px ;
-  
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 300px;
 }
 
-
+#all-playlists {
+  overflow-y: auto;
+}
 /*--ALL PLAYLIST SECTION HEADING---*/
 #all-playlists h1 {
-    color: #fff;
-    margin-top: 150px ;
-   margin-left: 50px ;
-   font-family: cursive ; 
-   background-color:darkmagenta ;
-   width: 210px ;
+  color: #fff;
+  margin-top: 150px;
+  text-align: center;
+  width: 210px;
 }
 
 /*---PLAYLIST SECTION LIST STYLING--*/
 .playlist-section li {
-    list-style: none;
-    margin-left: 20px ;
-    color: #fff ;
-    font-size: 2rem ;
-    font-family: cursive ;
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
 }
+
+@media (max-width: 768px) {
+  /* Adjust layout for smaller screens (tablets and phones) */
+  #Playlist-div {
+    width: 80vw; /* Take up more space on smaller screens */
+    height: 50vh; /* Adjust height */
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #playlist-name-input {
+    width: 90%;
+  }
+
+  #create-playlist-button {
+    width: 90%;
+    max-width: 250px; /* Make button smaller */
+  }
+
+  #add-to-playlist {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  #all-playlists h1 {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .playlist-section li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust layout for very small screens (smartphones) */
+  #Playlist-div {
+    width: 90vw; /* Max width for smaller devices */
+    height: 40vh; /* Adjust height */
+  }
+
+  #playlist-name-input {
+    width: 80%;
+  }
+
+  #create-playlist-button {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  #all-playlists h1 {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
 
